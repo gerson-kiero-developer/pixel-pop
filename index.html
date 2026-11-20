@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090d">
+  <title>Pixel & Pop — Elige tu plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Pixel y Pop, inicio"><span class="brand-icon">✦</span> PIXEL<span class="brand-amp">&</span>POP</a>
+    <nav aria-label="Navegación principal">
+      <a href="#categorias">Explorar</a>
+      <a href="#ruleta">Ruleta</a>
+    </nav>
+    <a class="top-cta" href="#ruleta">¿Qué hacemos hoy? <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> TU CENTRO DE ENTRETENIMIENTO</p>
+        <h1>¿Plan para<br>hoy? <span>Gíralo.</span></h1>
+        <p class="hero-text">Videojuegos, pelis y algo rico. Si no te decides, deja que la suerte elija por ti.</p>
+        <a class="button button-primary" href="#ruleta">Girar la ruleta <span>→</span></a>
+        <div class="social-proof"><div class="mini-avatars"><i>🎮</i><i>🍿</i><i>🍔</i></div><span>La diversión está a un giro</span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de mando, palomitas y hamburguesa">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <div class="float-card game-float"><span>🎮</span><small>PLAYER 1</small></div>
+        <div class="float-card popcorn-float"><span>🍿</span><small>NOCHE DE CINE</small></div>
+        <div class="float-card burger-float"><span>🍔</span><small>ANTOJO ACTIVADO</small></div>
+        <div class="hero-center"><span>★</span><b>FUN<br>MODE</b><small>ON</small></div>
+      </div>
+      <a class="scroll-cue" href="#categorias">DESLIZA PARA EXPLORAR <span>↓</span></a>
+    </section>
+
+    <section class="categories section-wrap" id="categorias">
+      <div class="section-heading"><div><p class="eyebrow">ELIGE TU MOOD</p><h2>¿Qué se te antoja?</h2></div><p>Tres formas de pasarla increíble.<br>Una sola página para decidir.</p></div>
+      <div class="category-grid">
+        <article class="category-card games-card">
+          <div class="card-top"><span class="category-icon">🎮</span><span class="card-number">01 / JUGAR</span></div>
+          <h3>Videojuegos</h3><p>Enciende la consola y que empiece la aventura.</p>
+          <div class="card-tags"><span>Acción</span><span>Aventura</span><span>Multiplayer</span></div>
+          <a href="#ruleta" class="card-link" data-pick="game">Ver ideas <span>↗</span></a><div class="card-art game-art">🎮</div>
+        </article>
+        <article class="category-card movies-card">
+          <div class="card-top"><span class="category-icon">🍿</span><span class="card-number">02 / VER</span></div>
+          <h3>Películas</h3><p>Prepara las palomitas. Tu próxima historia empieza aquí.</p>
+          <div class="card-tags"><span>Comedia</span><span>Acción</span><span>Ciencia ficción</span></div>
+          <a href="#ruleta" class="card-link" data-pick="movie">Ver ideas <span>↗</span></a><div class="card-art movie-art">🎬</div>
+        </article>
+        <article class="category-card food-card">
+          <div class="card-top"><span class="category-icon">🍔</span><span class="card-number">03 / COMER</span></div>
+          <h3>Comida rápida</h3><p>Ese antojo merece ser el protagonista del plan.</p>
+          <div class="card-tags"><span>Hamburguesas</span><span>Pizza</span><span>Snacks</span></div>
+          <a href="#ruleta" class="card-link" data-pick="food">Ver ideas <span>↗</span></a><div class="card-art food-art">🍟</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="roulette-section" id="ruleta">
+      <div class="roulette-inner">
+        <div class="roulette-copy"><p class="eyebrow"><span class="sparkle">✦</span> EL DESTINO DECIDE</p><h2>¿No sabes<br>qué elegir?</h2><p>Respira profundo, confía en el azar y deja que la ruleta arme tu próximo plan.</p><div class="roulette-note"><span>✧</span> Una idea nueva en cada giro</div></div>
+        <div class="wheel-area">
+          <div class="wheel-pointer">▼</div>
+          <div class="wheel" id="wheel" role="img" aria-label="Ruleta con opciones de videojuegos, películas y comida"></div>
+          <button id="spinButton" class="spin-button"><span>GIRAR</span><small>Y DESCUBRIR</small></button>
+          <div class="wheel-shadow"></div>
+        </div>
+      </div>
+      <div class="result-panel" id="resultPanel" aria-live="polite"><span class="result-icon" id="resultIcon">✨</span><div><small>TU PLAN ES...</small><strong id="resultText">¡Gira la ruleta!</strong></div><button id="againButton" type="button" aria-label="Girar de nuevo">↻</button></div>
+    </section>
+    <footer><a class="brand" href="#inicio"><span class="brand-icon">✦</span> PIXEL<span class="brand-amp">&</span>POP</a><span>Hecho para los que nunca se quedan sin plan.</span><a href="#inicio">Volver arriba ↑</a></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
